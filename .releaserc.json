@@ -1,0 +1,34 @@
+{
+  "branches": ["master"],
+  "preset": "angular",
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "presetConfig": true,
+        "linkCompare": true,
+        "linkReferences": true,
+        "writerOpts": {
+          "groupBy": "type",
+          "commitsSort": "header",
+          "commitGroupsSort": ["feat", "perf", "fix"]
+        }
+      }
+    ],
+    [
+      "@semantic-release/changelog",
+      {
+        "changelogFile": "docs/CHANGELOG.md"
+      }
+    ],
+    "@semantic-release/npm",
+    [
+      "@semantic-release/git",
+      {
+        "assets": ["package.json", "docs/CHANGELOG.md"],
+        "message": "chore(release): ${nextRelease.version} [skip ci]"
+      }
+    ]
+  ]
+}

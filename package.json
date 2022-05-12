@@ -1,0 +1,57 @@
+{
+  "name": "semantic-release-npm-gitlab-publish",
+  "version": "1.0.0",
+  "description": "Sharable configuration for semantic-release, extends experience for publishing to NPM & Gitlab registry: generates release-notes, changelog, publishes new version.",
+  "main": "src/gitlab/.releaserc.json",
+  "files": [
+    "src/gitlab/.releaserc.json"
+  ],
+  "scripts": {
+    "release": "semantic-release",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ftavilla/semantic-release-npm-gitlab-publish.git"
+  },
+  "keywords": [
+    "changelog",
+    "git",
+    "gitlab-package-registry",
+    "gitlab-publish",
+    "gitlab",
+    "npm-publish",
+    "npm",
+    "publish",
+    "releaserc",
+    "release",
+    "semantic-release-config",
+    "semantic-release",
+    ".releaserc.json",
+    "release.config.js"
+  ],
+  "author": "Fabrice TAVILLA",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/ftavilla/semantic-release-npm-gitlab-publish/issues"
+  },
+  "homepage": "https://github.com/ftavilla/semantic-release-npm-gitlab-publish#readme",
+  "dependencies": {
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/gitlab": "^9.2.1",
+    "@semantic-release/npm": "^9.0.1"
+  },
+  "peerDependencies": {
+    "semantic-release": ">=19.0.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.2.4",
+    "@commitlint/config-conventional": "^16.2.4",
+    "husky": "^8.0.1"
+  }
+}
